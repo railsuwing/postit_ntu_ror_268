@@ -28,7 +28,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-  	binding.pry
+ # 	binding.pry
   	params.require(:post).permit(:content)
   end
 end
