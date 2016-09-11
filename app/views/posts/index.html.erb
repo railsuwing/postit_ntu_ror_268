@@ -1,0 +1,17 @@
+<!--
+<h1>Posts List</h1>
+<hr>
+-->
+<%= render 'shared/title',	title: "List Page" %>
+<% @posts.each do |post| %>
+<div class="row">
+  <div class="well col-sm-4">
+    <!-- 顯示 post.title 和 content -->
+    <p><%= post.content %></p>
+    <span>
+      <!-- link_to 會產生出 html <a> tag -->
+      <%= link_to "show post", post_path(post)%>
+    </span>
+  </div>
+</div>
+<% end %>

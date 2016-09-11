@@ -1,0 +1,19 @@
+
+<%= render 'shared/title',	title: "Show Page" %>
+<div class "row">
+	<div class="col-md-8 well">
+	  <p>
+	    <%= @post.content%>
+	  </p>
+	</div>
+</div>
+
+<% @post.comments.each do |comment|%>
+	<div class="col-md-6 well">
+	  <p>
+	    <%= comment.content%>
+	  </p>
+	</div>
+<% end %>
+<%= link_to "back to list page" ,posts_path %>
+
